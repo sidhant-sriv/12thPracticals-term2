@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 # create cursor
 mycursor = mydb.cursor()
 # Count the total number of kids travelling from Anand travels
-mycursor.execute("SELECT COUNT(*) FROM School_Bus WHERE Transporter='Anand Travels'")
+mycursor.execute("SELECT SUM(Noofstud) FROM School_Bus WHERE Transporter='Anand Travels'")
 for x in mycursor.fetchall():
     print(x)
 # Increase the charges by 3000 where distance is greater than 25
