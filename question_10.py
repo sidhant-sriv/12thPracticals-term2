@@ -17,4 +17,6 @@ mycursor.execute("SELECT COUNT(*) FROM Items WHERE CostPerItem>10000")
 for x in mycursor.fetchall():
     print(x)
 # To display the details of the costliest Item.
-mycursor.execute("SELECT * FROM Items WHERE Cost=(SELECT MAX(Cost) FROM Items)")
+mycursor.execute("SELECT * FROM Items ORDER BY CostPerItem DESC LIMIT 1") 
+for x in mycursor.fetchall():
+    print(x)
