@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     passwd="",
-    database="Hospital"
+    database="grade_12_db"
 )
 
 # create cursor
