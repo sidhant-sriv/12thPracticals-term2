@@ -14,7 +14,7 @@ mycursor.execute("SELECT FLIGHTS.FNO, SOURCE, AIRLINES, FARE FROM FLIGHTS JOIN F
 for x in mycursor.fetchall():
     print(x)
 # To count total no of Indian Airlines flights starting from various cities
-mycursor.execute("SELECT SOURCE, COUNT(AIRLINES) FROM FLIGHTS WHERE AIRLINES = 'Indian Airlines' GROUP BY SOURCE")
+mycursor.execute("SELECT SOURCE, COUNT(AIRLINES) FROM FLIGHTS JOIN FARES ON FLIGHTS.FNO = FARES.FNO WHERE AIRLINES = 'Indian Airlines' GROUP BY SOURCE")
 for x in mycursor.fetchall():
     print(x)
 # Display all the details where DEST is Varanasi
