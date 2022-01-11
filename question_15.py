@@ -3,7 +3,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     passwd="",
-    database="Bank_database"
+    database="grade_12_db"
 )
 
 # create cursor
