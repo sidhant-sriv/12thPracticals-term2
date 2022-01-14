@@ -12,7 +12,7 @@ def ShowEmployee(stack):
     if len(stack) == 0:
         print("No employees")
     else:
-        s = sorted(stack, key=lambda x: x['name'], reverse=True)
+        s = sorted(stack, key=lambda x: x['name'])
         for i in s:
            for k, v in i.items():
                print("{} = {}".format(k, v))
