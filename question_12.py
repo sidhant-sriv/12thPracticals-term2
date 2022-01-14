@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
 # create cursor
 mycursor = mydb.cursor()
 #List different voters whose age falls in the range 20 to 25 in descending order of their names.
-mycursor.execute("SELECT * FROM Voter WHERE Age BETWEEN 20 AND 25 ORDER BY Name DESC")
+mycursor.execute("SELECT * FROM Voter WHERE Age BETWEEN 20 AND 25 ORDER BY VName DESC")
 for x in mycursor.fetchall():
     print(x)
 # Count the number of voters by grouped by age
