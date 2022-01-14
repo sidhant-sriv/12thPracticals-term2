@@ -23,4 +23,4 @@ to drop the existing table before running the script.
 - data_initialisation.sql removes all data from the records before
 inserting. Highly recommend using transactions to deal with it.
 
-### Special thanks to Monish Singhal (12D) and Sandhya C vijay for their contributions to this repo.
+### Special thanks to Monish Singhal (12D) and Sandhya C Vijay (12D) for their contributions to this repo.
