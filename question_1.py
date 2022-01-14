@@ -20,12 +20,12 @@ while True:
     """)
     choice = input("Would you like to insert, pop from stack, show the stack or exit? (i,r,s,e): ")
     if choice == "i":
-        name = input("Enter student name: ")
-        Maths = int(input("Enter student maths score: "))
-        Physics = int(input("Enter student physics score: "))
-        Biology = int(input("Enter student biology score: "))
-        marks = {'Maths': Maths, 'Physics': Physics, 'Biology': Biology}
-        insert_stack(stack, name, marks)
+        class_name = input("Enter the name of the class: ")
+        Maths = int(input("Enter the number of Mathematics students: "))
+        Physics = int(input("Enter the number of Physics students: "))
+        Biology = int(input("Enter the number of Biology students:"))
+        marks = {'Phy': Physics, 'Math': Maths, 'Bio': Biology}
+        insert_stack(stack, class_name, marks)
     elif choice == "r":
         remove_stack(stack)
     elif choice == "s":
