@@ -10,6 +10,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 # To increase the price of all watches by 10% whose Qty_Store is less than 150.
 mycursor.execute("UPDATE WATCHES SET Price=Price*1.1 WHERE Qty_Store<150")
+mydb.commit()
 # Disply different Types of Watches available in the given data;
 mycursor.execute("SELECT DISTINCT Type FROM WATCHES")
 for x in mycursor.fetchall():

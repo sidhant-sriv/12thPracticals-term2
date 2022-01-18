@@ -13,6 +13,8 @@ mycursor = mydb.cursor()
 mycursor.execute("ALTER TABLE INTERIORS ADD COLUMN dealers VARCHAR(10)")
 # Update the dealer column for all rows to ‘Unknown’
 mycursor.execute("UPDATE INTERIORS SET dealers='Unknown'")
+
+mydb.commit()
 #  Display the total amount after deducting the discount amount for every item
 mycursor.execute("SELECT ITEMNAME, PRICE, DISCOUNT, (PRICE- PRICE*DISCOUNT/100) FROM INTERIORS") # As I am not too sure about if this will work or not, I have decided to quit.
 for x in mycursor.fetchall():

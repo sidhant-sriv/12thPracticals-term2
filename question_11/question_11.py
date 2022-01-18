@@ -10,6 +10,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 # To increase the price of all Stationary by 4
 mycursor.execute("UPDATE Stationary SET Price=Price+4")
+mydb.commit()
 # To display the max and min price of companies with name not CAM
 mycursor.execute("SELECT MAX(Price), MIN(Price) FROM Stationary WHERE Company NOT LIKE 'CAM'")
 for x in mycursor.fetchall():

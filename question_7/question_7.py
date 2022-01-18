@@ -14,6 +14,7 @@ for x in mycursor.fetchall():
     print(x)
 #  Increase the Price of ‘Drama’ type of books by 10%
 mycursor.execute("UPDATE MOVIE SET Price=Price*1.1 WHERE Type='Drama'")
+mydb.commit()
 for x in mycursor.fetchall():
     print(x)
 #  Delete the column ‘Stars from the given table.

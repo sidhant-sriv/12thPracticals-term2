@@ -15,6 +15,7 @@ for x in mycursor.fetchall():
     print(x)
 # Increase the charges by 3000 where distance is greater than 25
 mycursor.execute("UPDATE School_Bus SET Charges=Charges+3000 WHERE Dist_km>25")
+mydb.commit()
 for x in mycursor.fetchall():
     print(x)
 # To show transporter wise average no of students traveling
