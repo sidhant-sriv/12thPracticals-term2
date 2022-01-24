@@ -9,11 +9,11 @@ mydb = mysql.connector.connect(
 # create cursor
 mycursor = mydb.cursor()
 # Display the average fees of karate
-mycursor.execute("SELECT AVG(Fee) FROM Coach WHERE Sport='Karate'")
+mycursor.execute("SELECT AVG(Fee) FROM Coach WHERE Sports='Karate'")
 for x in mycursor.fetchall():
     print(x)
 # Count the number of coaches in each sport
-mycursor.execute("SELECT Sport, COUNT(*) FROM Coach GROUP BY Sport")
+mycursor.execute("SELECT Sports, COUNT(*) FROM Coach GROUP BY Sports")
 for x in mycursor.fetchall():
     print(x)
 # To display details of all coaches where DOJ year is 1988
