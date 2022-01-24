@@ -17,6 +17,6 @@ mycursor.execute("SELECT Sports, COUNT(*) FROM Coach GROUP BY Sports")
 for x in mycursor.fetchall():
     print(x)
 # To display details of all coaches where DOJ year is 1988
-mycursor.execute("SELECT * FROM Coach WHERE DOJ LIKE '%1988%'")
+mycursor.execute("SELECT * FROM Coach WHERE YEAR(DOJ) = 1998")
 for x in mycursor.fetchall():
     print(x)
