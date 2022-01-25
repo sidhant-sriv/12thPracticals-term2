@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 # Display the names of the workers whose names end with the letter a
-mycursor.execute("SELECT Name FROM Worker WHERE Name LIKE '%a'")
+mycursor.execute("SELECT * FROM Worker WHERE Name LIKE '%a'")
 for x in mycursor.fetchall():
     print(x)
 # To total the number of employees in each category of PLevel
