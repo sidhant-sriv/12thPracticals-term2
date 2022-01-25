@@ -10,9 +10,9 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 # Add a new column called dealers of type varchar(10), update the dealer column for all rows to ‘Unknown’
 # Add new column
-mycursor.execute("ALTER TABLE INTERIORS ADD COLUMN dealers VARCHAR(10)")
+mycursor.execute("ALTER TABLE INTERIORS ADD COLUMN dealers VARCHAR(10) DEFAULT ='Unkown' ")
 # Update the dealer column for all rows to ‘Unknown’
-mycursor.execute("UPDATE INTERIORS SET dealers='Unknown'")
+# alternative is mycursor.execute("UPDATE INTERIORS SET dealers='Unknown'")
 
 mydb.commit()
 #  Display the total amount after deducting the discount amount for every item
